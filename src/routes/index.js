@@ -1,4 +1,3 @@
-
 const express = require('express');
 const { userCtrl } = require('../controllers');
 const { policyCtrl } = require('../controllers');

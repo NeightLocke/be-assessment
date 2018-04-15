@@ -5,7 +5,7 @@ const { userService } = require('../services');
 
 module.exports = class PolicyCtrl extends Controller {
   async getPoliciesByName(req, res) {
-    if (this.checkAuthorization([Roles.User, Roles.Admin], req, res)) {
+    if (this.checkAuthorization([Roles.Admin], req, res)) {
       try {
         const userResult = await userService.getOneFiltered('name', req.params.name);
         if (!userResult) {
@@ -29,7 +29,7 @@ module.exports = class PolicyCtrl extends Controller {
   }
 
   async getUserByPolicy(req, res) {
-    if (this.checkAuthorization([Roles.User, Roles.Admin], req, res)) {
+    if (this.checkAuthorization([Roles.Admin], req, res)) {
       try {
         const policyResult = await policyService.getOneFiltered('id', req.params.id);
         if (!policyResult) {
@@ -53,7 +53,7 @@ module.exports = class PolicyCtrl extends Controller {
   }
 
   async getAll(req, res) {
-    if (this.checkAuthorization([Roles.User, Roles.Admin], req, res)) {
+    if (this.checkAuthorization([Roles.Admin], req, res)) {
       try {
         const result = await policyService.getAll();
         res.status(200)

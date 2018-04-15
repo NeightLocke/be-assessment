@@ -1,0 +1,12 @@
+[
+  {
+    "email": "frigouser@enterprise.com",
+    "hashedPassword": "6538701b03e68f50b9ec12c99d92e3e5b7d3584e",
+    "role": "user"
+  },
+  {
+    "email": "frigoadmin@enterprise.com",
+    "hashedPassword": "934aae49f648ed870c9c421829f4cece6643cf86",
+    "role": "admin"
+  }
+]
