@@ -39,7 +39,9 @@ The project is divided in the following elements:
 
     This directory has the policies and clients controllers.
 
-    Both controllers have implemented functions that are related directly with the service layer which is in charge of reading and obtaining the data. Both are capable of manage the data obtained through the service and give a valid response. It is also important to remark, that before giving a response, the authorization level by the user asking the data, is taken into account.
+    Both controllers have implemented functions that are related directly with the service layer which is in charge of reading and obtaining the data. 
+    Both are capable of manage the data obtained through the service and give a valid response. 
+    It is also important to remark, that before giving a response, the authorization level by the user asking the data, is taken into account.
 
     Features implemented for users :
 
@@ -57,9 +59,11 @@ The project is divided in the following elements:
 
     In this directory you can find files related to the controller layer, service layer, logs and rolls:
 
-    - Controller layer: it handles the authorization system. Its purpose is to control that if requests needs authorization, verify if the action requested by the actual user is available for him or not.
+    - Controller layer: it handles the authorization system. 
+    Its purpose is to control that if requests needs authorization, verify if the action requested by the actual user is available for him or not.
 
-    - Service layer: its purpose is to obtain the data from the urls (where the mocked data is) and return the actual content in the mocked data. Everything is handle through _getALL_ function and, after, _getFiltered_ and _getOneFiltered_ functions are who filter the corresponding data taking into account a criteriion.
+    - Service layer: its purpose is to obtain the data from the urls (where the mocked data is) and return the actual content in the mocked data. 
+    Everything is handle through getALL function and, after, getFiltered and getOneFiltered functions are who filter the corresponding data taking into account a criterion.
 
     - Logger
     - Roles: user and admin
