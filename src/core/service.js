@@ -15,8 +15,7 @@ class Service {
   }
 
   /**
-   * Este metodo se encarga de devolver todos los datos que coinciden
-   * con un par nombre/valor encontrados en el conjunto de datos
+   * This method returns an object whose attribute “propertyName” is equal to “propertyValue”
    * @param {String} propertyName
    * @param {String} propertyValue
    */
@@ -33,8 +32,7 @@ class Service {
   }
 
   /**
-   * Este metodo se encarga de devolver el primer elemento contenido en el conjunto
-   * de todos los datos que coinciden con un par nombre/valor encontrados a traves de la
+   * This method returns the first element that whose attribute “propertyName” is equal to “propertyValue”
    * funcion getFiltered
    * @param {String} propertyName
    * @param {String} propertyValue
