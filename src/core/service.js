@@ -15,7 +15,8 @@ class Service {
   }
 
   /**
-   * This method returns an array of objects whose attribute “propertyName” is equal to “propertyValue”
+   * This method returns an array of objects 
+   * whose attribute “propertyName” is equal to “propertyValue”
    * @param {String} propertyName
    * @param {String} propertyValue
    */
@@ -32,7 +33,8 @@ class Service {
   }
 
   /**
-   * This method returns the first element of an array whose attribute “propertyName” is equal to “propertyValue”
+   * This method returns the first element of an array 
+   * whose attribute “propertyName” is equal to “propertyValue”
    * @param {String} propertyName
    * @param {String} propertyValue
    */
