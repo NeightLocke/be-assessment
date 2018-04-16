@@ -52,59 +52,56 @@ The project is divided in the following elements:
 
 ## Controllers section (./src/controllers)
 
-    This directory has the policies and clients controllers.
+This directory has the policies and clients controllers.
 
-    Both controllers have implemented functions that are related directly with the service layer which is in charge of reading and obtaining the data. 
-    Both are capable of manage the data obtained through the service and give a valid response. 
-    It is also important to remark, that before giving a response, the authorization level by the user asking the data, is taken into account.
+Both controllers have implemented functions that are related directly with the service layer which is in charge of reading and obtaining the data. 
+Both are capable of manage the data obtained through the service and give a valid response. 
+It is also important to remark, that before giving a response, the authorization level by the user asking the data, is taken into account.
 
-    Features implemented for users :
+Features implemented for users :
+  - getById, getByName and getAll
 
-        - getById, getByName and getAll
+Features implemented for policies :
+  - getPoliciesByName, getUserByPolicy and getAll
 
-    Features implemented for policies :
-
-        - getPoliciesByName, getUserByPolicy and getAll
-
-    If the requests has been done correctly, the reponse will be an OK (200) followed by a json with the required data.
-    If an internal error happens, a 500 Error will be returned followed by a json with an informative message.
-    If the required data doesn't exists, a 404 Not Found Error will be returned followed by a json  with an informative message.
+If the requests has been done correctly, the reponse will be an OK (200) followed by a json with the required data.
+If an internal error happens, a 500 Error will be returned followed by a json with an informative message.
+If the required data doesn't exists, a 404 Not Found Error will be returned followed by a json  with an informative message.
 
 ## Core section (`./src/core`)
 
-    In this directory you can find files related to the controller layer, service layer, logs and rolls:
+In this directory you can find files related to the controller layer, service layer, logs and rolls:
 
-    - Controller layer: it handles the authorization system. 
-    Its purpose is to control that if requests needs authorization, verify if the action requested by the actual user is available for him or not.
+- Controller layer: it handles the authorization system. Its purpose is to control that if requests needs authorization, verify if the action requested by the actual user is available for him or not.
 
-    - Service layer: its purpose is to obtain the data from the urls (where the mocked data is) and return the actual content in the mocked data. 
-    Everything is handle through getALL function and, after, getFiltered and getOneFiltered functions are who filter the corresponding data taking into account a criterion.
+- Service layer: its purpose is to obtain the data from the urls (where the mocked data is) and return the actual content in the mocked data. Everything is handle through getALL function and, after, getFiltered and getOneFiltered functions are who filter the corresponding data taking into account a criterion.
 
-    - Logger
-    - Roles: user and admin
+- Logger
+
+- Roles: user and admin
 
 ## Routes section (`./src/routes`)
 
-    Here you can find the API endpoints implemented for this assessment:
-    - _/users_ : Returns information related to all the clients
-    - _/users/:id_ : Returns information related to a client by an id given
-    - _/users/byname/:name_ : Returns information related to a client by a name given
-    - _/policies_ : Returns information related to all the policies, this endpoint is only accessible for admins
-    - _/policies/:name_ : Returns information related to all the policies associated to a client name, this endpoint is only accessible for admins
-    - _/policies/:id/user: Retruns information related to a policy associated to a client by Id given.
+Here you can find the API endpoints implemented for this assessment:
+- /users : Returns information related to all the clients
+- /users/:id : Returns information related to a client by an id given
+- /users/byname/:name : Returns information related to a client by a name given
+- /policies : Returns information related to all the policies, this endpoint is only accessible for admins
+- /policies/:name : Returns information related to all the policies associated to a client name, this endpoint is only accessible for admins
+- /policies/:id/user: Retruns information related to a policy associated to a client by Id given.
 
 ## Security section (`./src/security`)
 
-    - Read AUTHORIZATION section
+- Read AUTHORIZATION section
 
 ## Services section (`./src/services`)
 
-    - This directory is used to obtain  the data of the clients and policies known endpoints.
-    - In this section the data of the known policies and clients enpoints is obtained
+- This directory is used to obtain  the data of the clients and policies known endpoints.
+- In this section the data of the known policies and clients enpoints is obtained
 
 ## Test section(`./test/`)
 
-    - This directory will be better explained in the specific *Test Section* below.
+- This directory will be better explained in the specific *Test Section* below.
 
 - ./src/server.js
 - ./src/generate-tokens,js : Read AUTHORIZATION section
