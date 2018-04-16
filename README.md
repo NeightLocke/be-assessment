@@ -50,7 +50,7 @@ The authentication used in this assessment has been based on jwt. As indicated p
 
 The project is divided in the following elements:
 
-## Controllers section (`./src/controllers`)
+## Controllers section (./src/controllers)
 
     This directory has the policies and clients controllers.
 
