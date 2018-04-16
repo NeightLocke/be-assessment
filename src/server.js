@@ -7,7 +7,7 @@ const port = process.env.PORT || process.env.port || 3000;
 
 app.use('/', routes);
 
-app.use((req, res) => res.status(404).send('Invalid Route'));
+app.use((req, res) => res.status(404).send('404 Not Found'));
 
 app.listen(port, () => {
   logger.info(`API running on port ${port}`);
