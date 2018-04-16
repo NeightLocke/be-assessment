@@ -9,6 +9,9 @@ This repository es meant to be used as an assessment report. This assessment is 
   - Authorization
 
 ## USER MANUAL ##
+This api needs authorization. 
+You must read AUTHORIZATION SECTION first if you want to work with the assessment
+
 ## Requirements
 
 - Node.js (>=6) installed
@@ -30,6 +33,18 @@ This repository es meant to be used as an assessment report. This assessment is 
 ## How to run and see the tokens
 
 - `npm run tokens`
+
+## AUTHORIZATION SECTION ##
+
+The authentication used in this assessment has been based on jwt. As indicated previously, all the authenticated implementation is integarted in the ./src/security directory. On the other hand, the token geration is implemented in ./src/generate-tokens.js
+
+### How to use the assessment with authentication integrated?
+
+1. First of all you need to execute *npm run tokens* in your terminal. This command will generate two tokens available in the terminal which will correspond to user token and admin token.
+
+2. The requests must be done using *Authorization" header where you must include the token preceded by 'Bearer' (i.e. 'Bearer token')
+
+3. Finally, any requests can be done. As you can imagine, if you are using user token and you request /policies endpoint, the response will be an "Unauthorized" error. If you use the admin token you will obtain the corresponding response. If a token is not set, "unauthorized" error will also appear.
 
 ## ASSESSMENT SECTION ##
 
@@ -80,7 +95,7 @@ The project is divided in the following elements:
 
 ## Security section (`./src/security`)
 
-    - This directory will be better explained in the *Authorization Section* below.
+    - Read AUTHORIZATION section
 
 ## Services section (`./src/services`)
 
@@ -92,19 +107,7 @@ The project is divided in the following elements:
     - This directory will be better explained in the specific *Test Section* below.
 
 - ./src/server.js
-- ./src/generate-tokens,js : I will explain this part in AUTHORIZATION section
-
-## AUTHORIZATION SECTION ##
-
-The authentication used in this assessment has been based on jwt. As indicated previously, all the authenticated implementation is integarted in the ./src/security directory. On the other hand, the token geration is implemented in ./src/generate-tokens.js
-
-### How to use the assessment with authentication integrated?
-
-1. First of all you need to execute *npm run tokens* in your terminal. This command will generate two tokens available in the terminal which will correspond to user token and admin token.
-
-2. The requests must be done using *Authorization" header where you must include the token preceded by 'Bearer' (i.e. 'Bearer token')
-
-3. Finally, any requests can be done. As you can imagine, if you are using user token and you request /policies endpoint, the response will be an "Unauthorized" error. If you use the admin token you will obtain the corresponding response. If a token is not set, "unauthorized" error will also appear.
+- ./src/generate-tokens,js : Read AUTHORIZATION section
 
 ## TEST SECTION ## 
 
