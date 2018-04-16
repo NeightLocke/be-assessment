@@ -15,7 +15,7 @@ class Service {
   }
 
   /**
-   * This method returns an object whose attribute “propertyName” is equal to “propertyValue”
+   * This method returns an array of objects whose attribute “propertyName” is equal to “propertyValue”
    * @param {String} propertyName
    * @param {String} propertyValue
    */
@@ -32,8 +32,7 @@ class Service {
   }
 
   /**
-   * This method returns the first element that whose attribute “propertyName” is equal to “propertyValue”
-   * funcion getFiltered
+   * This method returns the first element of an array whose attribute “propertyName” is equal to “propertyValue”
    * @param {String} propertyName
    * @param {String} propertyValue
    */
