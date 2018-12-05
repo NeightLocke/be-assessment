@@ -18,7 +18,8 @@
     "request-promise": "^4.2.2",
     "uuid": "^3.2.1",
     "randomatic": "^3.0.0",
-    "cryptiles": "^4.1.2"
+    "cryptiles": "^4.1.2",
+    "merge": ">=1.2.1"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
